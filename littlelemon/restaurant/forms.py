@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Booking, Menu
+from .models import Booking, MenuItem
 
 # Code for loading form data on the Booking page
 class BookingForm(ModelForm):
@@ -10,5 +10,5 @@ class BookingForm(ModelForm):
 
 class MenuForm(ModelForm):
     class Meta:
-        model = Menu
+        model = MenuItem
         fields = "__all__"

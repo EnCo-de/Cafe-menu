@@ -66,7 +66,7 @@
     document.getElementById("today").innerHTML = date;
 
     fetch("{% url 'bookings' %}" + "?date=" + date)
-      .then((r) => r.json())
+      .then((response) => response.json())
       .then((data) => {
         reserved_slots = [];
         bookings = "";
@@ -89,7 +89,7 @@
 
         slot_options = '<option value="0" disabled>Select time</option>';
         console.log("Slots: ", reservation_slot);
-        for (let i = 1; i < 20; i++) {
+        for (let i = 10; i < 20; i++) {
           const label = formatTime(i);
           if (reserved_slots.includes(i)) {
             slot_options += `<option value=${i} disabled>${label}</option>`;
@@ -124,7 +124,7 @@
       method: "post",
       body: JSON.stringify(formdata),
     })
-      .then((r) => r.text())
+      .then((response) => response.text())
       .then((data) => {
         getBookings();
       });

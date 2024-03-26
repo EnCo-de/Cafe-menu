@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 
 from .forms import BookingForm
-from .models import Booking, Menu
+from .models import Booking, MenuItem
 
 from datetime import datetime
 import json
@@ -34,13 +34,13 @@ def reservations(request):
     return render(request, "bookings.html", {"bookings": bookings_data})
 
 def menu(request):
-    menu_data = Menu.objects.all()
+    menu_data = MenuItem.objects.all()
     main_data = {"menu": menu_data}
     return render(request, "menu.html", {"menu": main_data})
 
 def display_menu_item(request, pk=None):
     if pk:
-        menu_item = Menu.objects.get(pk=pk)
+        menu_item = MenuItem.objects.get(pk=pk)
     else:
         menu_item = ""
     return render(request, "menu_item.html", {"menu_item": menu_item})
