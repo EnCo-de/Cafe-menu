@@ -1,0 +1,7 @@
+[{"model": "restaurant.category", "pk": 1, "fields": {"title": "Dishes", "slug": 11}}, 
+{"model": "restaurant.menuitem", "pk": 1, "fields": {"name": "Greek salad", "price": 12, "menu_item_description": "Our famous Greek salad of crispy lettuce, peppers, olives, and our Chicago-style feta cheese. Garnished with crispy onion and salty capers.", 
+"featured": 1, "category_id": 1
+}}, 
+{"model": "restaurant.menuitem", "pk": 2, "fields": {"name": "Grilled fish", "price": 9, "menu_item_description": "", "featured": 1, "category_id": 1}}, 
+{"model": "restaurant.menuitem", "pk": 3, "fields": {"name": "Bruschetta", "price": 11, "menu_item_description": "", "featured": 1, "category_id": 1}}, 
+{"model": "restaurant.menuitem", "pk": 4, "fields": {"name": "Lemon dessert", "price": 7, "menu_item_description": "", "featured": 1, "category_id": 1}}]
